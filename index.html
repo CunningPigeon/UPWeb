@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <title>Practica</title>
+</head>
+
+<body>
+    <!-- <div id="snow-animation-container"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    
+    <script type="text/javascript" src="js/snow.js"></script> -->
+    <script> document.oncontextmenu = cmenu; function cmenu() { return false; } </script>
+    <script type="text/javascript" src="js/time.js"></script>
+    <script type="text/javascript" src="js/favorites.js"></script>
+    <div id="mySidenav" class="sidenav">
+        <a href="/" onclick="return AddToBookmark(this);" id="about">В избранное</a>
+        <a href="#consultation" id="blog">Консультация</a>
+        <a href="#footer" id="projects">Вниз</a>
+        <a href="#" class="img_up" id="contact">Наверх</a>
+    </div>
+
+    <div class="callout">
+        <div class="callout-header">Рекомендация</div>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <div class="callout-container">
+            <p>Под навигацией расположен прогресс бар</p>
+        </div>
+    </div>
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="header__logo">
+                <a href="#!" class="header__logo-link">
+                    <img src="images/head/logo.png" alt="" class="header__logo-pic">
+
+                </a>
+            </div>
+            <div class="hr"></div>
+            <div class="language">
+                <div class="language__english">UA</div>
+                <div class="language__russian">RU</div>
+            </div>
+            <div class="hr"></div>
+            <div class="course">
+                <div class="course__USD">
+                    <p class="course__USD">USD 28,90</p>
+                </div>
+                <div class="course__EUR">
+                    <p class="course__EUR">EUR 35,00</p>
+                </div>
+
+            </div>
+            <div class="hr"></div>
+            <div class="messengers">
+                <ul class="messengers__list">
+                    <li class="messengers__item">
+                        <a href="#!" class="messengers__logo-link">
+                            <img src="images/head/facebook.png" alt="facebook" class="messengers__logo-pic">
+                        </a>
+                    </li>
+                    <li class="messengers__item">
+                        <a href="#!" class="messengers__logo-link">
+                            <img src="images/head/instagram.png" alt="instagram" class="messengers__logo-pic">
+                        </a>
+                    </li>
+                    <li class="messengers__item">
+                        <a href="#!" class="messengers__logo-link">
+                            <img src="images/head/youtube.png" alt="youtube" class="messengers__logo-pic">
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="hr"></div>
+            <div class="contacts">
+                <div class="contacts__list">
+                    <div class="contacts__list-one">
+                        <p class="contacts__list-one">044-537-20-07 </p>
+                    </div>
+                    <div class="contacts__list-two">
+                        <p class="contacts__list-two">044-537-20-07 </p>
+                    </div>
+                </div>
+                <div class="cotacts__ico">
+                    <a href="#!" class="cotacts__ico-link">
+                        <img src="images/head/smartphone.png" alt="" class="cotacts__ico-pic">
+                    </a>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div class="input">
+                <input type="text" class="input__elem" placeholder="Maistra ONLINE" autocomplete="off">
+                <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+                <script type="text/javascript" src="js/script_no_input.js" async="async"></script>
+                <span class="text-field__icon">
+                    <img src="images/head/book.svg">
+                </span>
+            </div>
+            <div class="input">
+                <input type="text" class="input__elem" placeholder="ТУРЫ ONLINE">
+                <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+                <script type="text/javascript" src="js/script_no_input.js" async="async"></script>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <div class="navigation__wrapper">
+                <div class="navigation__search">
+                    <a href="#!" class="navigation__search-link">
+                        <img src="images/head/search.png" alt="search" class="navigation__search-pic">
+                    </a>
+                </div>
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a href="#!" class="navigation__link">
+                            <p>Отели</p>
+                            <img src="images/head/polygon.png" class="navigation-pic">
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#!" class="navigation__link">
+                            <p>Страны</p>
+                            <img src="images/head/polygon.png" class="navigation-pic">
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#!" class="navigation__link">
+                            <p>Авиа</p>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#!" class="navigation__link">
+                            <p>Каталог туров</p>
+                            <img src="images/head/polygon.png" class="navigation-pic">
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#!" class="navigation__link">
+                            <p>Агентам</p>
+                            <img src="images/head/polygon.png" class="navigation-pic">
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#!" class="navigation__link">
+                            <p>О нас</p>
+                            <img src="images/head/polygon.png" class="navigation-pic">
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#!" class="navigation__link">
+                            <p>Блог</p>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#!" class="navigation__link">
+                            <p>FAQ</p>
+                        </a>
+                    </li>
+                    <li class="navigation__item">
+                        <a href="#!" class="navigation__link">
+                            <p>Контакты</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+        <script type="text/javascript" src="js/progress-bar.js"></script>
+    </header>
+
+    <!-- 
+    <main class="main">
+        <div class="img__scrolling">
+            <div class="scrolling">
+                <div class="scrolling__wrapper">
+                    <div class="scrolling__text">
+                        <p class="scrolling__text-cost">От 300 € за сутки</p>
+                        <p class="scrolling__text-name">новый эко-отель mastila на о. хвар в Хорватии</p>
+                        <button type="submit" class="scrolling__button">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script type="text/javascript" src="js/slider_timer.js"></script> 
+
+    </main> -->
+    <div class="slideshow-container">
+
+        <!-- Полноразмерные изображения с числом и текстом подписи -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/body/block_01/mandarina 1.png" style="width:100%">
+            <div class="text">новый эко-отель mastila на о. хвар в Хорватии</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/body/block_01/maxresdefault.jpg" style="width:100%">
+            <div class="text">новый эко-отель mastila на о. хвар в Хорватии</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/body/block_01/montenegro.png" style="width:100%">
+            <div class="text">новый эко-отель mastila на о. хвар в Хорватии</div>
+        </div>
+
+        <!-- Вперед и назад кнопки -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- Точки/круги -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <script type="text/javascript" src="js/scrolling.js"></script>
+    </div>
+
+    <div class="service_bg">
+        <div class="wrapper">
+            <div class="service">
+                <div id="service" class="service__p service__p_1">
+                    <p class="servise__p__name">ВАШ ТУРОПЕРАТОР ВЫСОКОГО УРОВНЯ ОБСЛУЖИВАНИЯ.</p>
+                    <p class="servise__p__point"> Откройте мир путешествий заново.</p>
+                    <button type="submit" class="servise__p__button servise__p__button_none">Что мы
+                        предлагаем?</button>
+                    <button type="submit" class="servise__p__button servise__p__button">Консультация</button>
+                </div>
+
+                <div class="service__p service__p_2">
+                    <ul class="service__list">
+                        <li class="service__item">
+                            <a href="#!" class="service__link">
+                                <img src="images/body/block_02/point_one.png" class="service-pic">
+                                <p>ИНДИВИДУАЛЬНЫЙ ПОДХОД</p>
+                            </a>
+                        </li>
+                        <li class="service__item">
+                            <a href="#!" class="service__link">
+                                <img src="images/body/block_02/point_two.png" class="service-pic">
+                                <p>КОНСЬЕРЖ-СЕРВИС</p>
+                            </a>
+                        </li>
+                        <li class="service__item">
+                            <a href="#!" class="service__link">
+                                <img src="images/body/block_02/point_three.png" class="service-pic">
+                                <p>ОТДЫХ ПРЕМИУМ-КЛАССА</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hotels">
+        <div class="wrapper">
+            <div class="hotels__information">
+                <h1 class="hotels__title">ЛУЧШИЕ ОТЕЛИ</h1>
+                <button class="proud212">
+                    <div class="proud2121"></div>
+                </button>
+                <button class="proud213">
+                    <div class="proud2131"></div>
+                </button>
+                <div class="proud214"></div>
+                <button type="submit" class="hotels__button">Консультация</button>
+            </div>
+        </div>
+
+        <div class="hotels__component">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/body/block_03/hotels_01.png" class="hotels-pic">
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="flip-card-text">Портонови, Черногория</div>
+                        <div class="vector_row">
+                            <img src="images/body/block_03/star.png" class="star-pic">
+                            <img src="images/body/block_03/star.png" class="star-pic">
+                            <img src="images/body/block_03/star.png" class="star-pic">
+                            <img src="images/body/block_03/star.png" class="star-pic">
+                        </div>
+                        <div class="flip-card-text">One&Only Portonovi</div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/body/block_03/hotels_02.png" class="hotels-pic">
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="flip-card-text">Ровінь, п-в Істра</div>
+                        <div class="vector_row">
+                            <img src="images/body/block_03/star.png" class="star-pic">
+                            <img src="images/body/block_03/star.png" class="star-pic">
+                            <img src="images/body/block_03/star.png" class="star-pic">
+                        </div>
+                        <div class="flip-card-text">Зимовка в Regent Porto Montenegro</div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="images/body/block_03/hotels_03.png" class="hotels-pic">
+                    </div>
+                    <div class="flip-card-back">
+                        <div class="flip-card-text">Бока Котор, Черногория</div>
+                        <div class="vector_row">
+                            <img src="images/body/block_03/star.png" class="star-pic">
+                            <img src="images/body/block_03/star.png" class="star-pic">
+                            <img src="images/body/block_03/star.png" class="star-pic">
+                            <img src="images/body/block_03/star.png" class="star-pic">
+                        </div>
+                        <div class="flip-card-text">Лечение в Naftalan с авиа Киев-Загреб-Киев</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tours">
+        <div class="wrapper">
+            <div class="tours__information">
+                <h1 class="tours__title">АКТУАЛЬНЫЕ ТУРЫ</h1>
+                <button class="proud212">
+                    <div class="proud2121"></div>
+                </button>
+                <button class="proud213">
+                    <div class="proud2131"></div>
+                </button>
+                <div class="proud214"></div>
+                <button type="submit" class="tours__button">Все туры</button>
+            </div>
+
+            <div class="tours__component">
+                <ul class="tours__list">
+                    <li class="tours__item">
+                        <div class="tours__item-image">
+                            <a href="#!" class="tours__link">
+                                <img src="images/body/block_03/tours_01.png" class="tours-pic">
+                            </a>
+                        </div>
+                        <div class="tours__item__wrapper">
+                            <div class="touts__item__information">
+                                <h1 class="tours__item-title">One&Only Portonovi</h1>
+                                <p class="tours__item-subtitle">первый ультрароскошный курорт One&Only в Европе</p>
+                            </div>
+                            <div class="tours__item__cost">
+                                <div class="tours__item__cost-column">
+                                    <h1 class="tours__item__cost-title">от 818 €</h1>
+                                    <p class="tours__item__cost-subtitle">за номер в сутки в сезон</p>
+                                </div>
+                                <div class="tours__item__cost-column">
+                                    <p class="tours__item__cost-time">от 3 ночей с 01 мая 2021</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tours__item">
+                        <div class="tours__item-image">
+                            <a href="#!" class="tours__link">
+                                <img src="images/body/block_03/tours_02.png" class="tours-pic">
+                            </a>
+                        </div>
+                        <div class="tours__item__wrapper">
+                            <div class="touts__item__information">
+                                <h1 class="tours__item-title">One&Only Portonovi</h1>
+                                <p class="tours__item-subtitle">первый ультрароскошный курорт One&Only в Европе</p>
+                            </div>
+                            <div class="tours__item__cost">
+                                <div class="tours__item__cost-column">
+                                    <h1 class="tours__item__cost-title">от 818 €</h1>
+                                    <p class="tours__item__cost-subtitle">за номер в сутки в сезон</p>
+                                </div>
+                                <div class="tours__item__cost-column">
+                                    <p class="tours__item__cost-time">от 3 ночей с 01 мая 2021</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="tours__item">
+                        <div class="tours__item-image">
+                            <a href="#!" class="tours__link">
+                                <img src="images/body/block_03/tours_03.png" class="tours-pic">
+                            </a>
+                        </div>
+                        <div class="tours__item__wrapper">
+                            <div class="touts__item__information">
+                                <h1 class="tours__item-title">One&Only Portonovi</h1>
+                                <p class="tours__item-subtitle">первый ультрароскошный курорт One&Only в Европе
+                                </p>
+                            </div>
+                            <div class="tours__item__cost">
+                                <div class="tours__item__cost-column">
+                                    <h1 class="tours__item__cost-title">от 818 €</h1>
+                                    <p class="tours__item__cost-subtitle">за номер в сутки в сезон</p>
+                                </div>
+                                <div class="tours__item__cost-column">
+                                    <p class="tours__item__cost-time">от 3 ночей с 01 мая 2021</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="tours__table">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="news">
+        <div class="wrapper">
+            <div class="news__information">
+                <h1 class="news__title">ВАЖНЫЕ НОВОСТИ</h1>
+                <button class="proud212">
+                    <div class="proud2121"></div>
+                </button>
+                <button class="proud213">
+                    <div class="proud2131"></div>
+                </button>
+                <div class="proud214"></div>
+                <button type="submit" class="news__button">Все новости</button>
+            </div>
+
+            <div id="about2" class="news__component">
+                <ul class="news__list">
+                    <li class="news__item">
+                        <div class="news__item-image">
+                            <a href="#!" class="news__link">
+                                <img src="images/body/block_04/new_01.png" class="news-pic">
+                            </a>
+                        </div>
+                        <div class="news__item__wrapper">
+                            <div class="news__item__information">
+                                <h1 class="news__item-date">18 марта, 2021</h1>
+                                <p class="news__item-title">ЗИМОВКА В REGENT
+                                    PORTO MONTENEGRO</p>
+                                <a href="#!" class="tours__link">
+                                    <p class="news__item-titleLLL">Подробнее</p>
+                                    <img src="" class="-pic">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="news__item">
+                        <div class="news__item-image">
+                            <a href="#!" class="news__link">
+                                <img src="images/body/block_04/new_02.png" class="news-pic">
+                            </a>
+                        </div>
+                        <div class="news__item__wrapper">
+                            <div class="news__item__information">
+                                <h1 class="news__item-date">18 марта, 2021</h1>
+                                <p class="news__item-title">ЗИМОВКА В REGENT
+                                    PORTO MONTENEGRO</p>
+                                <a href="#!" class="tours__link">
+                                    <p class="news__item-titleLLL">Подробнее</p>
+                                    <img src="" class="-pic">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="news__item">
+                        <div class="news__item-image">
+                            <a href="#!" class="news__link">
+                                <img src="images/body/block_04/new_03.png" class="news-pic">
+                            </a>
+                        </div>
+                        <div class="news__item__wrapper">
+                            <div class="news__item__information">
+                                <h1 class="news__item-date">18 марта, 2021</h1>
+                                <p class="news__item-title">ЗИМОВКА В REGENT
+                                    PORTO MONTENEGRO</p>
+                                <a href="#!" class="tours__link">
+                                    <p class="news__item-titleLLL">Подробнее</p>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="news__item">
+                        <div class="news__item-image">
+                            <a href="#!" class="news__link">
+                                <img src="images/body/block_04/new_04.png" class="news-pic">
+                            </a>
+                        </div>
+                        <div class="news__item__wrapper">
+                            <div class="news__item__information">
+                                <h1 class="news__item-date">18 марта, 2021</h1>
+                                <p class="news__item-title">ЗИМОВКА В REGENT
+                                    PORTO MONTENEGRO</p>
+                                <a href="#!" class="tours__link">
+                                    <p class="news__item-titleLLL">Подробнее</p>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="learn__more">
+        <div class="wrapper">
+            <div class="learn__more__info">
+                <div class="learn__more__text">
+                    <h2>ВЫ - ПРЕДСТАВИТЕЛЬ ТУРАГЕНТСТВА</h2>
+                </div>
+                <div class="learn__more__image"></div>
+            </div>
+            <div class="learn__more__column">
+                <p>Для вас у нас есть специальные выгодные предложения.</p>
+                <button class="learn__more__butt">Узнать подробнее</button>
+            </div>
+
+        </div>
+    </div>
+    <div class="region">
+        <div class="wrapper">
+            <div class="region__info">
+                <div class="region__column">
+                    <p class="region__intro">Мы обещаем</p>
+                    <h3 class="region__text">ОТДЫХ ПРЕМИУМ-КЛАССА С БОЛЬШИМ ВНИМАНИЕМ К ДЕТАЛЯМ</h3>
+                </div>
+                <div class="region__text__red">
+                    <p>Специализируемся <span id="pk">на 4 странах</span></p>
+                </div>
+            </div>
+            <div class="region__component">
+                <ul class="region__list">
+                    <li class="region__item">
+                        <div class="region__item__column">
+                            <img src="images/body/block_08/horvatia.png" class="region-pic">
+                            <h1 class="region__title">Хорватия</h1>
+                            <button class="region__butt">Подробнее</button>
+                        </div>
+                    </li>
+                    <li class="region__item">
+                        <div class="region__item__column">
+                            <img src="images/body/block_08/chernogoria.png" class="region-pic">
+                            <h1 class="region__title">Черногория</h1>
+                            <button class="region__butt">Подробнее</button>
+                        </div>
+                    </li>
+                    <li class="region__item">
+                        <div class="region__item__column">
+                            <img src="images/body/block_08/clovenia.png" class="region-pic">
+                            <h1 class="region__title">Словения</h1>
+                            <button class="region__butt">Подробнее</button>
+                        </div>
+                    </li>
+                    <li class="region__item">
+                        <div class="region__item__column">
+                            <img src="images/body/block_08/italia.png" class="region-pic">
+                            <h1 class="region__title">Италия</h1>
+                            <button class="region__butt">Подробнее</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="region_information">
+            <div class="wrapper">
+                <div class="region__information__col">
+                    <div class="region__col-text"> Обеспечиваем отдых с повышенной надёжностью и персонализированным
+                        сервисом и <a href="#!" id="region__link">в других странах</a></div>
+                    <div class="region__border">ОТДЫХ С VALANTA ОСТАЁТСЯ ЯРКИМ ВОСПОМИНАНИЕМ У ВАС В ПАМЯТИ НАВСЕГДА
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="concierge">
+        <div class="wrapper">
+            <div class="concierge__column">
+                <div class="concierge__text">
+                    <h4 id="concierge__title">ЭКСКЛЮЗИВНЫЙ КОНСЬЕРЖ СЕРВИС ОТ VALANTA TRAVEL COMPANY</h4>
+                    <div class="concierge__line"></div>
+                    <div class="concierge__subtitle">
+                        <p class="concierge__subtitle-text">Мы не ограничеваемся стандартным набором услуг
+                            туроператору, потому что главная цель - превратить отдых клиентов в незабываемый отпыт.
+                        </p>
+                        <p class="concierge__subtitle-text">Поэтому стремимся обеспечить максимальный омфорт и
+                            удобство по всем аправлениям. Всегда даём ольше, чтобы приятно дивить клиентов.</p>
+                    </div>
+                </div>
+                <div class="concierge__frame">
+                    <img src="images/body/block_09/image.png" class="concierge-pic">
+                </div>
+            </div>
+            <div class="concierge__title-list">
+                <h1 id="concierge__title">ПРЕДОСТАВЛЯЕМ КОНСЬЕРЖ УСЛУГИ ЛЮБОГО УРОВНЯ СЛОЖНОСТИ:</h1>
+            </div>
+            <!-- <div class="concierge__line"></div> -->
+            <div class="concierge__column-list">
+                <ul class="concierge__list" id="concierge__list__margin-right">
+                    <li class="concierge__item">
+                        <div class="concirge__item-text">
+                            <p id="item__number">/01</p>
+                            <p class="item_text">Подбор и бронирование отелей и вилл самого высокого уровня</p>
+                        </div>
+                        <div class="concierge__line"></div>
+                    </li>
+                    <li class="concierge__item">
+                        <div class="concirge__item-text">
+                            <p id="item__number">/02</p>
+                            <p class="item_text">Подбор и бронирование авиабилетов</p>
+                        </div>
+                        <div class="concierge__line"></div>
+                    </li>
+                    <li class="concierge__item">
+                        <div class="concirge__item-text">
+                            <p id="item__number">/03</p>
+                            <p class="item_text">Аренда самолётов бизнес-авиации</p>
+                        </div>
+                        <div class="concierge__line"></div>
+                    </li>
+                    <li class="concierge__item">
+                        <div class="concirge__item-text">
+                            <p id="item__number">/04</p>
+                            <p class="item_text">Организация трансферов</p>
+                        </div>
+                        <div class="concierge__line"></div>
+                    </li>
+                    <li class="concierge__item">
+                        <div class="concirge__item-text">
+                            <p id="item__number">/05</p>
+                            <p class="item_text">Аренда яхт</p>
+                        </div>
+                        <div class="concierge__line"></div>
+                    </li>
+                </ul>
+                <ul class="concierge__list">
+                    <li class="concierge__item">
+                        <div class="concirge__item-text">
+                            <p id="item__number">/06</p>
+                            <p class="item_text">Заказ столиков в ресторанах и даже рекомендации по блюдам</p>
+                        </div>
+                        <div class="concierge__line"></div>
+                    </li>
+                    <li class="concierge__item">
+                        <div class="concirge__item-text">
+                            <p id="item__number">/07</p>
+                            <p class="item_text">Покупка билетов на концурты и мероприятия</p>
+                        </div>
+                        <div class="concierge__line"></div>
+                    </li>
+                    <li class="concierge__item">
+                        <div class="concirge__item-text">
+                            <p id="item__number">/08</p>
+                            <p class="item_text">Индивидуальные экскурсии</p>
+                        </div>
+                        <div class="concierge__line"></div>
+
+                    </li>
+                    <li class="concierge__item">
+                        <div class="concirge__item-text">
+                            <p id="item__number">/09</p>
+                            <p class="item_text">Организация корпоративных и личных мероприятий за границей</p>
+                        </div>
+                        <div class="concierge__line"></div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="consultation" class="consultation">
+        <div class="wrapper">
+            <div class="consultation__column">
+                <div class="consultation__info">
+                    <div class="consultation__title">ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ СПЕЦИАЛИСТА</div>
+                    <div class="consultation__subtitle">Оставьте данные прямо сейчас, и мы свяжемся с вами в ближайшее
+                        время</div>
+                </div>
+                <div class="consultation__hint">
+                    <div class="consultation__hint-frame">
+                        <div class="consultation__hint-text">Срок действия эксклюзивных предложений ограничен, поэтому
+                            узнавайте подробности
+                            заранее:
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="consultation__bid">
+                <form action="bid">
+                    <input class="input__field" type="text" placeholder="Имя">
+                    <input class="input__field-email" type="text" placeholder="Email">
+                    <input class="input__field-phone" type="text" placeholder="Phone" maxlength="20">
+                    <button class="consultation__butt" id="color_butt">Отправить</button>
+
+                    <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+                    <script type="text/javascript" src="js/script_input_field.js" async="async"></script>
+                    <!-- <script type="text/javascript" src="js/script_butt.js"></script> -->
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!-- <div class="partner">
+        <div class="wrapper">
+            <div class="partner__column">
+                <div class="partner__title">
+                    <h3>МЫ ГОРДИМСЯ ПАРТНЁРСТВОМ С ТАКИМИ КОМПАНИЯМИ</h3>
+                </div>
+                <div class="partner__subtitle">
+                    <div class="partner__subtitle-text">Налаженное сотрудничество и хорошее отношение с другими домами -
+                        ключевая задача для
+                        туроператора.</div>
+                    <div class="partner__subtitle-text">Это наша сильная сторона, благодаря которой мы обеспечиваем
+                        клиентам решение любых задач во
+                        время отдыха и удовлетворение даже самых требовательных запросов.</div>
+                </div>
+            </div>
+            <div class="partner__scroll">
+                <button class="proud212">
+                    <div class="proud2121"></div>
+                </button>
+                <div class="scroll__component">
+                    <ul class="scroll__list">
+                        <li class="scroll__item">
+                            <div class="scroll__image-frame">
+                                <img src="images/body/block_13/mainstra.png" class="scroll-pic"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="proudb122">
+                    <div class="proudb1221">
+                        <div class="proudb12211"></div>
+                    </div>
+                    <div class="proudb1221">
+                        <div class="proudb12221"></div>
+                    </div>
+                    <div class="proudb1221">
+                        <div class="proudb12231"></div>
+                    </div>
+                    <div class="proudb1221">
+                        <div class="proudb12241"></div>
+                    </div>
+                    <div class="proudb1221">
+                        <div class="proudb12251"></div>
+                    </div>
+                    <div class="proudb1221">
+                        <div class="proudb12261"></div>
+                    </div>
+                </div> -->
+    <!--<button class="proud213">
+                    <div class="proud2131"></div>
+                </button>
+            </div>
+
+        </div>
+    </div> -->
+
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__column">
+                <div class="footer__component">
+                    <div class="footer__logo">
+                        <a href="#!" class="footer__logo-link">
+                            <img src="images/footer/Logo.jpg" alt="" class="footer__logo-pic">
+                        </a>
+                    </div>
+                    <ul class="footer__list">
+                        <li class="footer__item">Отели</li>
+                        <li class="footer__item">Страны</li>
+                        <li class="footer__item">Maistra online</li>
+                        <li class="footer__item">Туры online</li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item">Агентам</li>
+                        <li class="footer__item">Онас</li>
+                        <li class="footer__item">Блог</li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item" id="color">Режим работы</li>
+                        <li class="footer__item">Пн-Пт 10:00-19:00</li>
+                        <li class="footer__item"><span class="trfed">Время</span></li>
+                    </ul>
+                    <ul class="footer__list">
+                        <li class="footer__item">+38 (000) 000-00-00</li>
+                        <li class="footer__item">+38 (000) 000-00-00</li>
+                        <li class="footer__item">+38 (000) 000-00-00</li>
+                        <li class="footer__item" id="color">Все контакты</li>
+                    </ul>
+                </div>
+                <div class="footer__line"></div>
+                <div class="footer__component">
+                    <div class="footer-text">2002-2021 Туроператор Valanta Travel Company</div>
+                    <div class="footer__mess">
+                        <ul class="footer__mess__list">
+                            <li class="footer__mess__item">
+                                <a href="#!" class="footer__mess__logo-link">
+                                    <img src="images/footer/facebook.png" alt="facebook" class="footer__mess__logo-pic">
+                                </a>
+                            </li>
+                            <li class="footer__mess__item">
+                                <a href="#!" class="footer__mess__logo-link">
+                                    <img src="images/footer/instagram.png" alt="instagram"
+                                        class="footer__mess__logo-pic">
+                                </a>
+                            </li>
+                            <li class="footer__mess__item">
+                                <a href="#!" class="footer__mess__logo-link">
+                                    <img src="images/footer/youtube.png" alt="youtube" class="footer__mess__logo-pic">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1614 @@
+/* 
+шрифты 
+3D стили
+флип карты
+
+JS 6/10
+снег
+прогресс бар
+рекомендация
+кнопка наверх
+слидер
+Запрет нажатия правой кнопки мыши на сайте
+Время
+Добавление в избранное
+
+*/
+
+/* Mysidenav style start */
+/* Стиль ссылки внутри sidenav */
+#mySidenav a {
+    position: fixed; /* Расположите их относительно окна браузера*/
+    left: -100px; /* Расположите их за пределами экрана */
+    transition: 0.3s; /* Добавить переход при наведении курсора */
+    padding: 15px; /* 15px отступы */
+    width: 150px; /* Установите определенную ширину */
+    text-decoration: none; /* Удалить подчеркивание */
+    font-size: 20px; /* Увеличить размер шрифта */
+    color: white; /* Белый цвет текста */
+    border-radius: 0 5px 5px 0; /* Закругленные углы на верхней правой и нижней правой стороне */
+    margin-top: 38em;
+}
+  
+  #mySidenav a:hover {
+    left: 0; /* При наведении курсора мыши, сделать элементы отображаются так, как они должны */
+  }
+  
+  /* Ссылка about: 20px сверху с зеленым фоном */
+  #about {
+    top: 20px;
+    background-color: #4CAF50;
+  }
+  
+  #blog {
+    top: 80px;
+    background-color: #2196F3; /* Синий */
+  }
+  
+  #projects {
+    top: 140px;
+    background-color: #f44336; /* Красный */
+  }
+  
+  #contact {
+    top: 200px;
+    background-color: #555 /* Светло-Черный */
+  }
+  /* Mysidenav style end */
+/* Callout style start  */
+/* Поле выноски - фиксированное положение в нижней части страницы */
+.callout {
+    position: fixed;
+    bottom: 35px;
+    right: 20px;
+    margin-left: 20px;
+    max-width: 300px;
+  }
+  
+  /* Заголовок выноски */
+  .callout-header {
+    padding: 25px 15px;
+    background: #46ab44;
+    font-size: 30px;
+    color: white;
+  }
+  
+  /* Контейнер/тело выноски */
+  .callout-container {
+    padding: 15px;
+    background-color: #ffffff;
+    color: black
+  }
+  
+  /* Кнопка закрытия */
+  .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  
+  /* Изменение цвета при наведении курсора мыши */
+  .closebtn:hover {
+    color: rgb(18, 98, 16);
+  }
+/*  */
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 73%; /* 1045 */
+    margin: 0 auto;
+}
+.snow-animation-container{
+    width: 90%;
+}
+.header{
+    position: fixed; 
+    background: white;
+    width: 100%;
+
+    font-family: "Open Sans";
+    font-size: 1em; /*16*/
+
+    border-bottom: 1px solid #D0D0D0;
+}
+.header__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 0px 14px 0px;
+    max-width: 86%/*1237px*/;
+    margin: 0 auto;
+}
+.header__logo-pic{
+    width: 100%/*131px*/;
+    height: 72px;
+} 
+.hr{
+    border-left: 1px solid #E2E2E2;
+    height: 40px;
+}
+.header__wrapper_line{
+    border-top: 1px solid #D0D0D0;
+} 
+.language{
+    font-weight: 400;
+    line-height: 20.75px;
+    justify-content: center;
+}
+.language__russian:hover{
+    background: #4AD295;
+    color: white;
+    border-radius: 2px;
+    padding: 1px 2px 1px 2px;
+}
+.language__english:hover{
+    background: #4AD295;
+    color: white;
+    border-radius: 2px;
+    padding: 1px 2px 1px 2px;
+}
+.course{
+    font-weight: 400;
+    line-height: 20.75px;
+}
+.messengers__list{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.messengers__item{
+    margin-right: 10px;
+}
+.messengers__item:last-child{
+    margin-right: 0;
+}
+.messengers__logo-pic{
+    width: 20px;
+    height: 20px;
+    /* padding: 0px 4.84px 0px 5.16px;
+    opacity: 0.5px; */
+}
+.messengers__logo-pic:hover{
+    width: 25px;
+    height: 25px;
+}
+.contacts{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.contacts__list{
+    font-weight: 700;
+    line-height: 20.75px;
+}
+.cotacts__ico-pic{
+    width: 39px;
+    height: 39px;
+    margin-left: 10px;
+}
+.cotacts__ico-pic:hover{
+    width: 45px;
+    height: 45px;
+}
+.contacts__list{
+    font-weight: 700;
+    line-height: 20.75px;
+}
+.contacts__list-one:hover{
+    color: #4AD295;
+    cursor: pointer;
+}
+.contacts__list-two:hover{
+    color: #4AD295;
+    cursor: pointer;
+}
+.input__elem{
+    width: 240px;
+    height: 55px;
+    border-radius: 2px 0px 0px 0px;
+    margin-left: 10px;
+    background: #EFF3F6;
+    border: none;
+    padding: 10px;
+    /*  -maistra -tours*/
+}
+input.input__elem::placeholder{
+    color: #373737;
+    text-indent: 10px;
+    font-family: "Montserrat";
+    font-size: 1em; /*16*/
+    font-weight: 600;
+    line-height: 19.5px;
+}
+/* Header styles end */
+
+
+/* Navigation styles start */
+
+.navigation{
+    font-family: "Suisse Int'l Trial";
+    font-size: 0.9375em; /*15*/
+    font-weight: 400;
+    line-height: 19.46px;
+    color: #171717;
+}
+.navigation__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 55%/*1093px*/;
+    height: 70px;
+    margin: 0 auto;
+}
+.navigation__search-pic{
+    width: 19px;
+    height: 17.17px;
+}
+.navigation__list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    margin: 0 auto;
+}
+.navigation__link{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.navigation__item{
+    margin-right: 56px;   
+}
+.navigation__item:last-child{
+    margin-right: 0;
+}
+.navigation__item:first-child{
+    margin-left: 79px;
+}
+.navigation-pic{
+    width: 6px;
+    height: 6px;
+    margin-left: 7px;
+}
+a.navigation__link:link, a.navigation__link:visited {
+    color: #616161;
+    text-decoration: none;
+}
+a.navigation__link:hover, a.navigation__link:active {
+    /* color: #171717; */
+    color: black;
+}
+/* Контейнер прогресса (серый фон) */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+  }
+  
+  /* Индикатор прогресса (индикатор прокрутки) */
+  .progress-bar {
+    height: 8px;
+    background: #4caf50;
+    width: 0%;
+  }
+
+
+
+
+/* Navigation styles end */
+
+
+/* Scrolling styles start */
+
+/* Контейнер слайд-шоу */
+.slideshow-container {
+    max-width: 100%;
+    max-height: 20%;
+
+    position: relative;
+    margin: auto;
+    padding-top: 9%;
+  }
+  
+  /* Скрыть изображения по умолчанию */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Вперед иназад кнопки */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.125em/*18px*/;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Положение "next кнопки" справа */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* При наведении курсора добавьте черный цвет фона с немного прозрачным */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Подпись текст */
+  .text {
+    color: #f2f2f2;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+
+    font-family: "Montserrat";
+    font-size: 2.8125em; /*45*/
+    font-weight: 500;
+    line-height: 55px;
+  }
+  
+  /* Номер текста (1/3 и т.д.) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size:  0.75em/*12*/;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Точки/пули/индикаторы */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Исчезающая анимация */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+
+
+.scrolling{
+    font-family: "Montserrat";
+    height: 40vh;
+}
+.scrolling__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+
+    max-width: 73%;
+    margin: 0 auto;
+}
+
+.scrolling__text-cost{
+    font-family: "Open Sans";
+    font-size: 1.5em; /*24*/
+    font-weight: 600;
+    line-height: 32px;
+    width: 205px;
+
+    margin: 110px 0px 0px 0px;
+    color: white;
+    text-align: center;
+    border: 1px solid #FFFF;
+    padding: 1px 2px 1px 2px;
+}
+.scrolling__text-name{
+    font-size: 2.8125em; /*45*/
+    font-weight: 500;
+    line-height: 55px;
+    width: 725px;
+    height: 102px;
+    color: white;
+}
+.scrolling__button{
+    width: 270px;
+    height: 60px;
+    margin-top: 40px;
+    color: #FFFFFF;
+    background: #FFFFFF40;
+    border: none;
+
+    font-size: 1em;/*16*/
+    font-weight: 700;
+    line-height: 19.5px;
+    /* margin-bottom: 30px; */
+}
+.scrolling__button:hover{
+    border: 1px solid rgb(133, 133, 133);
+    color: rgb(157, 157, 157);
+    background-color: rgb(216, 216, 216);
+}
+.img__scrolling{
+    /* height: 502px; */
+    padding-top: 100px;
+    width: 100%;
+    height: 50%;
+    background: black;
+    /* background: url(../images/body/block_01/maxresdefault.png) no-repeat center; */
+    background-size: cover;
+}
+/* Scrolling styles end */
+
+/* Service styles start */
+.service_bg{
+    font-family: "Montserrat";
+    background: #F8F8F8;
+    height: 250px;
+    width: 100%;
+}
+.service{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 0 auto;
+    width: 100%;
+}
+.service__p_1{
+    /* width: 624px;  */
+    width: 50%;
+}
+.service__p_2{
+    /* width: 624px;  */
+    width: 15%;
+    /* height: 163px; */
+}
+.servise__p__name{
+    font-size: 1.875em; /*30*/
+    font-weight: 600;
+    line-height: 36px;
+    margin-top: 30px;
+    color: #1D1D1D;
+}
+.servise__p__point{
+    font-family: "Open Sans";
+    font-size: 1.125em; /*18*/
+    font-weight: 600;
+    line-height: 28px;
+    margin-top: 15px;
+    color: #777777;
+}
+.servise__p__button_none{
+    width: 270px;
+    height: 50px;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 19.5px;
+    margin-top: 20px;
+    color: #FFFFFF;
+    background: #BDBDBD;
+    border: none;
+}
+.servise__p__button_none:hover{
+    border: 1px solid rgb(133, 133, 133);
+    color: rgb(157, 157, 157);
+    background-color: rgb(216, 216, 216);
+}
+.servise__p__button{
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 19.5px;
+    color: #969696;
+    width: 220px;
+    height: 50px;
+    border: 1px solid #969696;
+}
+.servise__p__button:hover{
+    border: 1px solid rgb(133, 133, 133);
+    color: rgb(157, 157, 157);
+    background-color: rgb(216, 216, 216);
+}
+.service__p_2{
+    width: 425px;
+    /* height: 163px; */
+}
+.service__item:first-child{
+    margin-top: 30px;
+}
+.service__item:first-child{
+    margin-top: 20px;
+}
+.service__link{
+    display: flex; 
+    align-items: center;
+    justify-content: start;
+}
+.service__list{
+    font-family: "Open Sans";
+    font-size: 1.125em; /*18*/
+    font-weight: 600;
+    line-height: 66px;
+}
+.service-pic{
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+}
+a.service__link:link, a.service__link:visited {
+    color: #3D3D3D;
+    text-decoration: none;
+}
+a.service__link:hover, a.service__link:active {
+    color: #171717;
+}
+/* Service styles end */
+
+
+/* Hotels styles start */
+.proud212,.proud213{
+    height: 50px;
+    width: 50px;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: bottom right, center center, top left;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.proud212{
+    background-image: url(../images/body/block_03/Ellipse32.png);
+}
+.proud213{
+    background-image: url(../images/body/block_03/Ellipse31.png);
+}
+.proud2121,.proud2131{
+    height: 7px;
+    width: 25px;
+    background-repeat: no-repeat;
+    background-position: bottom right, center center, top left;
+    background-size: cover; 
+}
+.proud2121{
+    border: none;
+    background: transparent;
+    background-image: url(../images/body/block_03/Vector1.png);
+}
+.proud2131{
+    background-image: url(../images/body/block_03/Vector.png);
+}
+.proud214{
+    height: 1px;
+    width: 25%;
+    background-color: gray;
+}
+.hotels{
+    font-family: "Montserrat";
+    font-weight: 500;
+}
+.hotels__information{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 125px;
+    margin-bottom: 50px;
+}
+.hotels__title{
+    font-size: 2.8em; /*45*/
+    line-height: 55px;
+    width: 40%;
+}
+.hotels__button{
+    font-size: 0.875em;/*14*/
+    font-weight: 700;
+    line-height: 17.07px;
+    margin-left: 30px;
+    color: #969696;
+    width: 140px;
+    height: 45px;
+    background: transparent;
+    border: 1px solid #969696;
+}
+.hotels__button:hover{
+    border: 1px solid rgb(133, 133, 133);
+    color: rgb(157, 157, 157);
+    background-color: rgb(216, 216, 216);
+}
+.hotels__component{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 1.25em; /*20*/
+    font-weight: 500;
+    line-height: 34px; 
+}
+.vector_row{
+    display: flex;
+}
+.star-pic{
+    width: 50px;
+    height: 50px;
+}
+.hotels__list{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 1.25em; /*20*/
+    font-weight: 500;
+    line-height: 34px; 
+}
+.hotels__item{
+    width: 32%;
+    height: 32%;
+    margin-right: 2%;
+    background-color: transparent;
+    
+    perspective: 1000px;
+}
+.hotels__item:last-child{
+    margin-right: 0;
+}
+.hotels-pic{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/* Flip card style start */
+/* Контейнер флип-карт - установите ширину и высоту на все, что вы хотите. Мы добавили свойство border, чтобы продемонстрировать, что сам флип выходит из коробки при наведении (удалите перспективу, если вы не хотите 3D-эффект */
+.flip-card {
+    background-color: transparent;
+    width: 32%;
+    height: 500px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; 
+  }
+  
+  /* Этот контейнер необходим для того чтобы расположить переднюю и заднюю сторону */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Сделайте горизонтальный флип, когда вы перемещаете мышь над контейнером флип-бокса */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Расположите переднюю и заднюю стороны */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    background-image: url(../images/body/block_03/Ellipse32.png) cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  /* Стиль лицевой стороны (запасной вариант, если изображение отсутствует) */
+  .flip-card-front {
+    background-color: #3a3a3a;
+    color: black;
+  }
+  
+  /* Стиль задней стороны */
+  .flip-card-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(0deg, rgb(20 47 88 / 0%) 0%, #F8F8F8 60%), rgb(209, 209, 209);
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+}
+.flip-card-text{
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 34px;
+    width: 40%;
+}
+/* Flip card style end */
+/* Hotels styles end */
+
+/* Tours styles start */
+.tours{
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 1em;
+}
+.tours__information{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.tours__title{
+    font-size: 2.8125em; /*45*/
+    line-height: 55px;
+}
+.tours__button{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.07px;
+    color: #969696;
+    width: 140px;
+    height: 45px;
+    background: transparent;
+    border: 1px solid #969696;
+}
+.tours__button:hover{
+    border: 1px solid rgb(133, 133, 133);
+    color: rgb(157, 157, 157);
+    background-color: rgb(216, 216, 216);
+}
+.tours__list{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 1.25em; /*20*/
+    font-weight: 500;
+    line-height: 34px; 
+}
+.tours__item{
+    width: 30%;
+    height: 33%;
+    margin-right: 2%;
+    background: #F8F8F8;
+}
+.tours__item:last-child{
+    margin-right: 0;
+}
+.tours__item-image{
+    width: 100%;
+    height: 52%;
+}
+.tours__item__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 92%;
+    margin: 0 auto;
+}
+.touts__item__information{
+    width: 100%;
+    font-size: 1.25em; /*20*/
+    line-height: 34px;
+    color: #323232;
+    margin-top: 7%;
+    padding-bottom: 5%;
+    border-bottom: 1px solid #E8E8E8;
+}
+.tours__item-subtitle{
+    font-family: "Open Sans";
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 24px;
+    color: #848484;
+    margin-top: 10%;
+}
+.tours__item__cost{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-bottom: 6%;
+}
+.tours__item__cost-title{
+    font-size:  1.5em; /*24*/
+    line-height: 34px;
+    color: #DD4053;
+}
+.tours__item__cost-subtitle{
+    font-family: "Open Sans";
+    line-height: 18px;
+    font-size: 0.75em; /*12*/
+    font-weight: 600;
+    color: #C9C9C9;
+}
+.tours__item__cost-time{
+    font-family: "Open Sans";
+    font-size: 0.75em; /*12*/
+    font-weight: 400;
+    line-height: 18px;
+    max-width: 65px;
+    color: #3E3E3E;
+}
+.tours__item:last-child{
+    margin-right: 0;
+}
+.tours-pic{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.tours__table{
+    background: gray;
+    margin-top: 10px;
+    height: 140px;
+    width: 100%;
+}
+/* Tours styles end */
+
+/* News style start */
+.news{
+    font-family: "Montserrat";
+    font-weight: 500;
+    background: #F8F8F8;
+}
+.news__information{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.news__title{
+    font-size: 2.8125em; /*45*/
+    line-height: 55px;
+}
+.news__button{
+    font-size: 0.875em; /*14*/
+    font-weight: 700;
+    line-height: 17.07px;
+    color: #969696;
+    width: 140px;
+    height: 45px;
+    background: transparent;
+    border: 1px solid #969696;
+}
+.news__button:hover{
+    border: 1px solid rgb(133, 133, 133);
+    color: rgb(157, 157, 157);
+    background-color: rgb(216, 216, 216);
+}
+.news__list{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 1.25em; /*20*/
+    font-weight: 500;
+    line-height: 34px; 
+}
+.news__item{
+    width: 23%;
+    height: 33%;
+    margin-right: 2%;
+    padding-right: 1%;
+    /* background: #F8F8F8; */
+    border-right: 1px solid #E2E2E2;
+}
+.line{
+    border-left: 1px solid #E2E2E2;
+    height: 100%;
+}
+.news__item:last-child{
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+.news__item-image{
+    width: 100%;
+    height: 52%;
+}
+.news__item__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 92%;
+    margin: 0 auto;
+}
+.news__item__information{
+    width: 100%;
+    font-size: 1.25em;/*20*/
+    line-height: 34px;
+    color: #323232;
+    margin-top: 7%;
+    padding-bottom: 5%;
+    border-bottom: 1px solid #E8E8E8;
+}
+.news__item__cost-subtitle{
+    font-family: "Open Sans";
+    font-size: 0.875em; /*14*/
+    font-weight: 400;
+    line-height: 24px;
+    color: #232323;
+}
+.news__item__cost-time{
+    font-family: "Open Sans";
+    font-size: 0.75em; /*12*/
+    font-weight: 400;
+    line-height: 18px;
+    max-width: 65px;
+    color: #3E3E3E;
+}
+.news__item:last-child{
+    margin-right: 0;
+}
+.news-pic{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+/* .news__item:hover{
+    filter: blur(2px);
+} */
+/* News style end  */
+
+
+/* Learn__more style start*/
+.learn__more{
+    width: 100%;
+    height: 450px;
+    background-image: url(../images/body/block_07/Rovinj.png);
+    background-repeat: no-repeat;
+    background-position: bottom right, center center, top left;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    text-align: start;
+    color: white;
+    font-size:  1.125em; /*18*/
+}
+.learn__more__info{
+    width: 90%;
+    height: 125px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 98px;
+    margin-bottom: 15px;
+}
+.learn__more__text{
+    width: 60%;
+    line-height: 50px;
+    font-size: 2.5em; /*40*/
+    color: white;
+}
+.learn__more__image{
+    width: 15%;
+    height: 100%;
+    background-image: url(../images/body/block_07/amed12.png);
+    background-repeat: no-repeat;
+    background-position: bottom right, center center, top left;
+    background-size: cover;
+}
+.learn__more__column{
+    display: flex;
+    flex-direction: column;
+}
+.learn__more__butt{
+    width: 270px;
+    height: 60px;
+    margin-top: 10px;
+    border: 1px solid rgb(209, 209, 209);
+    color: rgb(209, 209, 209);
+    background-color: white;
+} 
+.learn__more__butt:hover{
+    border: 1px solid rgb(133, 133, 133);
+    color: rgb(157, 157, 157);
+    background-color: rgb(216, 216, 216);
+}
+/* Learn__more style end*/
+
+/* Region style start*/
+
+.region{
+    width: 100%;
+    /* height: 55vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    font-size: 1em;
+}
+.region__intro{
+    font-family: 'Anton', sans-serif;
+    font-family: 'Corinthia', cursive;
+    font-family: 'Shalimar', cursive;
+    color: rgb(180, 19, 19);
+}
+.region__info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    text-align: start;
+    font-family: "Montserrat";
+    font-weight: 500;
+    margin-top: 100px;
+}
+#pk{
+    font-size: 1.25em/*20*/;
+    font-weight: 700;
+    line-height: 24.5px;
+}
+.region__text{
+    width: 60%;
+    font-size: 31px;
+
+    line-height: 42px;
+    margin-top: 10px;
+    color: black;
+}
+.region__text__red{
+    width: 13%;
+    font-size: 1.25em/*20*/;
+
+    line-height: 24.5px;
+    color: rgb(212, 32, 0);
+}
+.region__component{
+    margin-top: 100px;
+    width: 100%;
+}
+.region__list{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 1.25em; /*20*/
+
+    line-height: 34px; 
+    width: 100%;
+}
+.region__item{
+    width: 23%;/*238*/
+    height: 185px; 
+    margin-right: 2%;
+    padding-right: 1%;
+    
+    border-right: 1px solid #E2E2E2;
+}
+.region__item__column{
+    background: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+.region__item:last-child{
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
+.region-pic{
+    width: 50%;
+    height: 50%;
+}
+.region__title{
+    font-family: "Montserrat";
+    font-size: 1.25em/*20*/;
+    font-weight: 600;
+    line-height: 20px;
+}
+.region__item:hover{
+    color: rgb(212, 32, 0);
+}
+.region__butt{
+    width: 80%; 
+    height: 40px;
+    font-family: "Open Sans";
+    font-size:  0.875em/*14*/;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    border: 1px solid rgb(190, 190, 190);
+    color: rgb(190, 190, 190);
+    background: transparent;
+}
+.region__butt:hover{
+    border: 1px solid rgb(133, 133, 133);
+    color: rgb(157, 157, 157);
+    background-color: rgb(216, 216, 216);
+}
+.region_information{
+    width: 100%;
+    font-size: 1.125em/*18*/;
+    line-height: 28px;
+    margin-top: 80px;
+}
+.region__information__col{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 90px;
+}
+.region__col-text{
+    width: 20%;
+    font-size: 1.125em/*18*/;
+}
+#region__link{
+    color: #DD4053;
+}
+.region__border{
+    width: 30%;
+    border: 1px solid #C4C4C4;
+    padding: 10px;
+}
+/* Region style end */
+
+/* Concierge style start */
+
+.concierge{
+    width: 100%;
+    /* height: 100vh; */
+
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 1.0625em/*17*/;
+    line-height: 28px;
+    color: black;
+    background-image: linear-gradient(0deg, rgb(20 47 88 / 0%) 0%, #F8F8F8 45%), url(../images/body/block_11/bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+}
+.concierge__column{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.concierge__text{
+    width: 60%;  
+} 
+#concierge__title{
+    font-size: 1.5625em/*25*/;
+    margin-bottom: 50px;
+}
+#concierge__title:hover{
+    text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.211), 0 0 1em rgba(255, 0, 0, 0.211), 0 0 0.2em rgba(255, 0, 0, 0.211);
+}
+.concierge__line{
+    width: 100%; 
+    background-color: #b4b4b4;
+    height: 1px;
+    margin-bottom: 30px;
+}
+.concierge__subtitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.concierge__subtitle-text{
+    width: 40%;
+    color: #656565;
+}
+.concierge__frame{
+    width: 30%;
+    height: 30%;
+}
+.concierge-pic{
+    width: 90%;
+    height: 70%;
+    border-radius: 15px;
+}
+.concierge-pic:hover{
+    filter: blur(2px);
+    border: 1px solid red;
+}
+.concierge__title-list{
+    width: 60%;
+}
+.concierge__column-list{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+
+    width: 100%;
+    margin: 0 auto;
+}
+.concierge__list{
+    width: 50%;
+    font-family: "Montserrat";
+    font-size: 1.0625em/*17*/;
+    font-weight: 500;
+    line-height: 26px;
+} 
+#concierge__list__margin-right{
+    margin-right: 50px;
+}
+.concierge__item{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    width: 85%;
+    margin-bottom: 15px;
+}
+.concierge__item:hover .concierge__line{
+    border: 2px solid red;
+}
+.concirge__item-text{
+    display: flex;
+    justify-content: start;
+
+    width: 100%;
+    margin-bottom: 15px;
+}
+#item__number{
+    font-size: 1em;
+    margin-right: 43px;
+    color: #717171;
+}
+/* Concierge style end */
+
+/* Consultation style start */
+
+.consultation{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 475px;
+
+    background-image: url(../images/body/block_12/Mask\ Group.png);
+    background-repeat: no-repeat;
+    background-position: bottom right, center center, top left;
+    background-size: cover;
+
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 1.0625em/*17*/;
+    line-height: 28px;
+    color: black;
+    background-color: white;
+}
+.consultation__column{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+.consultation__title{
+    font-size: 40px;
+    line-height: 55px;
+    color: #FFFFFF;
+}
+.consultation__subtitle{
+    font-size: 2em/*20*/;
+    font-weight: 400;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+.consultation__hint{
+    font-family: "Montserrat";
+    font-weight: 500;
+
+    margin-right: 30px;
+    line-height: 15px;
+    
+} 
+.consultation__hint-frame{
+    width: 275px;
+    height: 180px;
+    background-color: rgba(224, 224, 224, 0.205);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+.consultation__hint-text{
+    font-size: 1em;
+    line-height: 15px;
+    text-align: start;
+    color: white;
+}
+
+.consultation__bid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* height: 50px; */
+
+    font-family: "Montserrat";
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 19.5px;
+
+    margin-top: 45px;
+    width: 100%;
+}
+.input__field{
+    background-color: transparent;
+    padding: 10px;
+    color: #C4C4C4;
+    border: 1px solid white;
+    width: 23%/*245px*/;
+    margin-right: 20px;
+    height: 50px;
+}
+.input__field-email{
+    background-color: transparent;
+    padding: 10px;
+    color: #C4C4C4;
+    border: 1px solid white;
+    width: 23%/*245px*/;
+    margin-right: 20px;
+    height: 50px;
+}
+.input__field-phone{
+    background-color: transparent;
+    padding: 10px;
+    color: #C4C4C4;
+    border: 1px solid white;
+    width: 23%/*245px*/;
+    margin-right: 20px;
+    height: 50px;
+}
+#input__field::placeholder {
+    color: #C4C4C4;
+}
+.consultation__butt{
+    background-color: white;
+    color: gray;
+    border: none;
+    width: 20%/*245px*/;
+    height: 50px;
+}
+.consultation__butt:hover{
+    border: 1px solid rgb(133, 133, 133);
+    color: rgb(93, 93, 93);
+    background-color: rgb(216, 216, 216);
+}
+/* Consultation style end */
+
+/*  */
+
+.partner{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background-image: linear-gradient(0deg, rgb(20 47 88 / 0%) 0%, #F8F8F8 90%), url(../images/body/block_13/bg_image.png);
+    background-repeat: no-repeat;
+    background-position: bottom right, center center, top left;
+    background-size: cover;
+}
+.partner__column{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    font-family: "Montserrat";
+    font-size: 2.5em;/*40*/
+    font-weight: 500;
+    line-height: 55px;
+
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 89px;
+}
+.partner__title{
+    width: 30%;
+}
+.partner__subtitle{
+    width: 60%;
+    font-size: 1.25em;/*20*/
+    font-weight: 500;
+    line-height: 30px;
+    color: #656565;
+}
+.partner__subtitle-text{
+    margin-top: 15px;
+}
+.partner__scroll{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.scroll__component{
+    width: 100%;
+}
+.scroll__item{
+    width: 20%;
+    height: 20%;
+    
+}
+.scroll__image-frame{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    
+    border: 1px solid rgb(221, 221, 221);
+}
+.scroll-pic{
+    width: 100%;
+    height: 100%;
+    margin: 40px 20px 40px 20px;
+}
+
+.proudb1221{
+    width: 175px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid rgb(221, 221, 221);
+}
+/* Footer style start */
+
+.footer{
+    width: 100%;
+    height: 30vh;
+    background-image: linear-gradient(0deg, rgb(20 47 88 / 0%) 0%, #F8F8F8 90%), url(../images/footer/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__column{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+}
+.footer__component{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    width: 100%;
+    margin: 0 auto;
+}
+.footer__logo{
+    background: transparent;
+    margin-right: 4%;
+    width: 30%;
+}
+.footer__logo-pic{
+    width: 90%;
+    height: 90%;
+} 
+.footer__list{
+    /* font-family: "Suisse Int'l Trial"; */
+    font-family: "Open Sans";
+    font-size: 0.9375em/*15*/;
+    font-weight: 400;
+    line-height: 19.46px;
+    margin-left: 5%;
+    width: 40%;
+}
+.footer_item{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+#color{
+    color: #3E3E3E;
+    opacity: 0.5;
+}
+.footer__line{
+    width: 100%;
+    height: 1px;
+    /* border-left: 1px solid #E2E2E2;
+    height: 40px; */
+    background-color: #1D1D1D33;
+    margin: 20px 0px 20px 0px;
+}
+.footer-text{
+    font-family: "Open Sans";
+    font-size: 0.875em/*14*/;
+    font-weight: 400;
+    line-height: 18.16px;
+    opacity: 0.5;
+    width: 70%;
+}
+.footer__mess{
+    width: auto;
+    opacity: 0.5;
+}
+.footer__mess__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer__mess__item{
+    margin-right: 10px;
+}
+.footer__mess__item:last-child{
+    margin-right: 0;
+}
+.footer__mess__logo-pic{
+    width: 20px;
+    height: 20px;
+}
+.footer__mess__logo-pic:hover{
+    width: 25px;
+    height: 25px;
+}
+/* Footer style end */
