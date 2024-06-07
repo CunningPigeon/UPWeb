@@ -3,7 +3,7 @@
 3D стили
 флип карты
 
-JS 6/10
+JS 
 снег
 прогресс бар
 рекомендация
@@ -18,7 +18,7 @@ JS 6/10
 /* Mysidenav style start */
 /* Стиль ссылки внутри sidenav */
 #mySidenav a {
-    position: fixed; /* Расположите их относительно окна браузера*/
+    position: fixed; /*Расположите их относительно окна браузера*/
     left: -100px; /* Расположите их за пределами экрана */
     transition: 0.3s; /* Добавить переход при наведении курсора */
     padding: 15px; /* 15px отступы */
@@ -395,16 +395,16 @@ a.navigation__link:hover, a.navigation__link:active {
   
   /* Исчезающая анимация */
   .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
+    /* -webkit-animation-name: fade; */
+    /* -webkit-animation-duration: 1.5s; */
     animation-name: fade;
     animation-duration: 1.5s;
   }
   
-  @-webkit-keyframes fade {
+  /* @-webkit-keyframes fade {
     from {opacity: .4}
     to {opacity: 1}
-  }
+  } */
   
   @keyframes fade {
     from {opacity: .4}
@@ -601,6 +601,7 @@ a.service__link:hover, a.service__link:active {
 }
 .proud213{
     background-image: url(../images/body/block_03/Ellipse31.png);
+    
 }
 .proud2121,.proud2131{
     height: 7px;
@@ -724,7 +725,8 @@ a.service__link:hover, a.service__link:active {
   /* Расположите переднюю и заднюю стороны */
   .flip-card-front, .flip-card-back {
     position: absolute;
-    background-image: url(../images/body/block_03/Ellipse32.png) cover;
+    background-image: url(../images/body/block_03/Ellipse32.png);
+    background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -1188,7 +1190,7 @@ a.service__link:hover, a.service__link:active {
     width: 20%;
     font-size: 1.125em/*18*/;
 }
-#region__link{
+.region__link{
     color: #DD4053;
 }
 .region__border{
@@ -1227,11 +1229,11 @@ a.service__link:hover, a.service__link:active {
 .concierge__text{
     width: 60%;  
 } 
-#concierge__title{
+.concierge__title{
     font-size: 1.5625em/*25*/;
     margin-bottom: 50px;
 }
-#concierge__title:hover{
+.concierge__title:hover{
     text-shadow: 1px 1px 2px rgba(255, 0, 0, 0.211), 0 0 1em rgba(255, 0, 0, 0.211), 0 0 0.2em rgba(255, 0, 0, 0.211);
 }
 .concierge__line{
@@ -1303,7 +1305,7 @@ a.service__link:hover, a.service__link:active {
     width: 100%;
     margin-bottom: 15px;
 }
-#item__number{
+.item__number{
     font-size: 1em;
     margin-right: 43px;
     color: #717171;
@@ -1418,7 +1420,7 @@ a.service__link:hover, a.service__link:active {
     margin-right: 20px;
     height: 50px;
 }
-#input__field::placeholder {
+.input__field::placeholder {
     color: #C4C4C4;
 }
 .consultation__butt{
@@ -1569,7 +1571,11 @@ a.service__link:hover, a.service__link:active {
     align-items: start;
     justify-content: start;
 }
-#color{
+.footer_item-color{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+
     color: #3E3E3E;
     opacity: 0.5;
 }

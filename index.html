@@ -10,15 +10,16 @@
     <title>Practica</title>
 </head>
 
-<body>
+<body onload="gallery()">
     <!-- <div id="snow-animation-container"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
-    
-    <script type="text/javascript" src="js/snow.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script> -->
+
+    <script src="js/snow.js"></script>
     <script> document.oncontextmenu = cmenu; function cmenu() { return false; } </script>
-    <script type="text/javascript" src="js/time.js"></script>
-    <script type="text/javascript" src="js/favorites.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/modal.js"></script>
     <div id="mySidenav" class="sidenav">
         <a href="/" onclick="return AddToBookmark(this);" id="about">В избранное</a>
         <a href="#consultation" id="blog">Консультация</a>
@@ -38,7 +39,6 @@
             <div class="header__logo">
                 <a href="#!" class="header__logo-link">
                     <img src="images/head/logo.png" alt="" class="header__logo-pic">
-
                 </a>
             </div>
             <div class="hr"></div>
@@ -97,15 +97,15 @@
             <div class="input">
                 <input type="text" class="input__elem" placeholder="Maistra ONLINE" autocomplete="off">
                 <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
-                <script type="text/javascript" src="js/script_no_input.js" async="async"></script>
+                <script src="js/script_no_input.js" async="async"></script>
                 <span class="text-field__icon">
-                    <img src="images/head/book.svg">
+                    <img alt="book" src="images/head/book.svg">
                 </span>
             </div>
             <div class="input">
                 <input type="text" class="input__elem" placeholder="ТУРЫ ONLINE">
                 <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
-                <script type="text/javascript" src="js/script_no_input.js" async="async"></script>
+                <script src="js/script_no_input.js" async="async"></script>
             </div>
         </div>
 
@@ -120,13 +120,13 @@
                     <li class="navigation__item">
                         <a href="#!" class="navigation__link">
                             <p>Отели</p>
-                            <img src="images/head/polygon.png" class="navigation-pic">
+                            <img src="images/head/polygon.png" alt="polygon" class="navigation-pic">
                         </a>
                     </li>
                     <li class="navigation__item">
                         <a href="#!" class="navigation__link">
                             <p>Страны</p>
-                            <img src="images/head/polygon.png" class="navigation-pic">
+                            <img src="images/head/polygon.png" alt="polygon" class="navigation-pic">
                         </a>
                     </li>
                     <li class="navigation__item">
@@ -137,19 +137,19 @@
                     <li class="navigation__item">
                         <a href="#!" class="navigation__link">
                             <p>Каталог туров</p>
-                            <img src="images/head/polygon.png" class="navigation-pic">
+                            <img src="images/head/polygon.png" alt="polygon" class="navigation-pic">
                         </a>
                     </li>
                     <li class="navigation__item">
                         <a href="#!" class="navigation__link">
                             <p>Агентам</p>
-                            <img src="images/head/polygon.png" class="navigation-pic">
+                            <img src="images/head/polygon.png" alt="polygon" class="navigation-pic">
                         </a>
                     </li>
                     <li class="navigation__item">
                         <a href="#!" class="navigation__link">
                             <p>О нас</p>
-                            <img src="images/head/polygon.png" class="navigation-pic">
+                            <img src="images/head/polygon.png" alt="polygon" class="navigation-pic">
                         </a>
                     </li>
                     <li class="navigation__item">
@@ -163,9 +163,7 @@
                         </a>
                     </li>
                     <li class="navigation__item">
-                        <a href="#!" class="navigation__link">
-                            <p>Контакты</p>
-                        </a>
+                        <a href="#!" class="navigation__link">Контакты</a>
                     </li>
                 </ul>
             </div>
@@ -173,7 +171,7 @@
         <div class="progress-container">
             <div class="progress-bar" id="myBar"></div>
         </div>
-        <script type="text/javascript" src="js/progress-bar.js"></script>
+        <script src="js/progress-bar.js"></script>
     </header>
 
     <!-- 
@@ -198,19 +196,19 @@
         <!-- Полноразмерные изображения с числом и текстом подписи -->
         <div class="mySlides fade">
             <div class="numbertext">1 / 3</div>
-            <img src="images/body/block_01/mandarina 1.png" style="width:100%">
+            <img src="images/body/block_01/mandarina.png" alt="mandarina" style="width:100%">
             <div class="text">новый эко-отель mastila на о. хвар в Хорватии</div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">2 / 3</div>
-            <img src="images/body/block_01/maxresdefault.jpg" style="width:100%">
+            <img src="images/body/block_01/maxresdefault.jpg" alt="maxresdefault" style="width:100%">
             <div class="text">новый эко-отель mastila на о. хвар в Хорватии</div>
         </div>
 
         <div class="mySlides fade">
             <div class="numbertext">3 / 3</div>
-            <img src="images/body/block_01/montenegro.png" style="width:100%">
+            <img src="images/body/block_01/montenegro.png" alt="montenegro" style="width:100%">
             <div class="text">новый эко-отель mastila на о. хвар в Хорватии</div>
         </div>
 
@@ -225,14 +223,16 @@
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
-        <script type="text/javascript" src="js/scrolling.js"></script>
+        <script src="js/scrolling.js"></script>
     </div>
-
+    <div id="result"></div>
+    <script src="js/cursor.js"></script>
+    <script src="js/text.js"></script>
     <div class="service_bg">
         <div class="wrapper">
             <div class="service">
                 <div id="service" class="service__p service__p_1">
-                    <p class="servise__p__name">ВАШ ТУРОПЕРАТОР ВЫСОКОГО УРОВНЯ ОБСЛУЖИВАНИЯ.</p>
+                    <div class="servise__p__name">ВАШ ТУРОПЕРАТОР ВЫСОКОГО УРОВНЯ ОБСЛУЖИВАНИЯ.</div>
                     <p class="servise__p__point"> Откройте мир путешествий заново.</p>
                     <button type="submit" class="servise__p__button servise__p__button_none">Что мы
                         предлагаем?</button>
@@ -243,19 +243,19 @@
                     <ul class="service__list">
                         <li class="service__item">
                             <a href="#!" class="service__link">
-                                <img src="images/body/block_02/point_one.png" class="service-pic">
+                                <img alt="point" src="images/body/block_02/point_one.png" class="service-pic">
                                 <p>ИНДИВИДУАЛЬНЫЙ ПОДХОД</p>
                             </a>
                         </li>
                         <li class="service__item">
                             <a href="#!" class="service__link">
-                                <img src="images/body/block_02/point_two.png" class="service-pic">
+                                <img alt="point" src="images/body/block_02/point_two.png" class="service-pic">
                                 <p>КОНСЬЕРЖ-СЕРВИС</p>
                             </a>
                         </li>
                         <li class="service__item">
                             <a href="#!" class="service__link">
-                                <img src="images/body/block_02/point_three.png" class="service-pic">
+                                <img alt="point" src="images/body/block_02/point_three.png" class="service-pic">
                                 <p>ОТДЫХ ПРЕМИУМ-КЛАССА</p>
                             </a>
                         </li>
@@ -284,15 +284,15 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="images/body/block_03/hotels_01.png" class="hotels-pic">
+                        <img src="images/body/block_03/hotels_01.png" alt="hotels" class="hotels-pic">
                     </div>
                     <div class="flip-card-back">
                         <div class="flip-card-text">Портонови, Черногория</div>
                         <div class="vector_row">
-                            <img src="images/body/block_03/star.png" class="star-pic">
-                            <img src="images/body/block_03/star.png" class="star-pic">
-                            <img src="images/body/block_03/star.png" class="star-pic">
-                            <img src="images/body/block_03/star.png" class="star-pic">
+                            <img alt="star" src="images/body/block_03/star.png" class="star-pic">
+                            <img alt="star" src="images/body/block_03/star.png" class="star-pic">
+                            <img alt="star" src="images/body/block_03/star.png" class="star-pic">
+                            <img alt="star" src="images/body/block_03/star.png" class="star-pic">
                         </div>
                         <div class="flip-card-text">One&Only Portonovi</div>
                     </div>
@@ -301,14 +301,14 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="images/body/block_03/hotels_02.png" class="hotels-pic">
+                        <img alt="hotels" src="images/body/block_03/hotels_02.png" class="hotels-pic">
                     </div>
                     <div class="flip-card-back">
                         <div class="flip-card-text">Ровінь, п-в Істра</div>
                         <div class="vector_row">
-                            <img src="images/body/block_03/star.png" class="star-pic">
-                            <img src="images/body/block_03/star.png" class="star-pic">
-                            <img src="images/body/block_03/star.png" class="star-pic">
+                            <img alt="star" src="images/body/block_03/star.png" class="star-pic">
+                            <img alt="star" src="images/body/block_03/star.png" class="star-pic">
+                            <img alt="star" src="images/body/block_03/star.png" class="star-pic">
                         </div>
                         <div class="flip-card-text">Зимовка в Regent Porto Montenegro</div>
                     </div>
@@ -317,15 +317,15 @@
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
-                        <img src="images/body/block_03/hotels_03.png" class="hotels-pic">
+                        <img alt="hotels" src="images/body/block_03/hotels_03.png" class="hotels-pic">
                     </div>
                     <div class="flip-card-back">
                         <div class="flip-card-text">Бока Котор, Черногория</div>
                         <div class="vector_row">
-                            <img src="images/body/block_03/star.png" class="star-pic">
-                            <img src="images/body/block_03/star.png" class="star-pic">
-                            <img src="images/body/block_03/star.png" class="star-pic">
-                            <img src="images/body/block_03/star.png" class="star-pic">
+                            <img alt="star" src="images/body/block_03/star.png" class="star-pic">
+                            <img alt="star" src="images/body/block_03/star.png" class="star-pic">
+                            <img alt="star" src="images/body/block_03/star.png" class="star-pic">
+                            <img alt="star" src="images/body/block_03/star.png" class="star-pic">
                         </div>
                         <div class="flip-card-text">Лечение в Naftalan с авиа Киев-Загреб-Киев</div>
                     </div>
@@ -333,6 +333,8 @@
             </div>
         </div>
     </div>
+    <script src="js/gallery.js"></script>
+    <script src="js/dialog.js"></script>
     <div class="tours">
         <div class="wrapper">
             <div class="tours__information">
@@ -348,11 +350,11 @@
             </div>
 
             <div class="tours__component">
-                <ul class="tours__list">
+                <ul class="tours__list" id="gallery">
                     <li class="tours__item">
                         <div class="tours__item-image">
                             <a href="#!" class="tours__link">
-                                <img src="images/body/block_03/tours_01.png" class="tours-pic">
+                                <img alt="tours" src="images/body/block_03/tours_01.png" class="tours-pic">
                             </a>
                         </div>
                         <div class="tours__item__wrapper">
@@ -374,7 +376,7 @@
                     <li class="tours__item">
                         <div class="tours__item-image">
                             <a href="#!" class="tours__link">
-                                <img src="images/body/block_03/tours_02.png" class="tours-pic">
+                                <img alt="tours" src="images/body/block_03/tours_02.png" class="tours-pic">
                             </a>
                         </div>
                         <div class="tours__item__wrapper">
@@ -396,7 +398,7 @@
                     <li class="tours__item">
                         <div class="tours__item-image">
                             <a href="#!" class="tours__link">
-                                <img src="images/body/block_03/tours_03.png" class="tours-pic">
+                                <img alt="tours" src="images/body/block_03/tours_03.png" class="tours-pic">
                             </a>
                         </div>
                         <div class="tours__item__wrapper">
@@ -444,43 +446,7 @@
                     <li class="news__item">
                         <div class="news__item-image">
                             <a href="#!" class="news__link">
-                                <img src="images/body/block_04/new_01.png" class="news-pic">
-                            </a>
-                        </div>
-                        <div class="news__item__wrapper">
-                            <div class="news__item__information">
-                                <h1 class="news__item-date">18 марта, 2021</h1>
-                                <p class="news__item-title">ЗИМОВКА В REGENT
-                                    PORTO MONTENEGRO</p>
-                                <a href="#!" class="tours__link">
-                                    <p class="news__item-titleLLL">Подробнее</p>
-                                    <img src="" class="-pic">
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="news__item">
-                        <div class="news__item-image">
-                            <a href="#!" class="news__link">
-                                <img src="images/body/block_04/new_02.png" class="news-pic">
-                            </a>
-                        </div>
-                        <div class="news__item__wrapper">
-                            <div class="news__item__information">
-                                <h1 class="news__item-date">18 марта, 2021</h1>
-                                <p class="news__item-title">ЗИМОВКА В REGENT
-                                    PORTO MONTENEGRO</p>
-                                <a href="#!" class="tours__link">
-                                    <p class="news__item-titleLLL">Подробнее</p>
-                                    <img src="" class="-pic">
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="news__item">
-                        <div class="news__item-image">
-                            <a href="#!" class="news__link">
-                                <img src="images/body/block_04/new_03.png" class="news-pic">
+                                <img alt="new" src="images/body/block_04/new_01.png" class="news-pic">
                             </a>
                         </div>
                         <div class="news__item__wrapper">
@@ -497,7 +463,42 @@
                     <li class="news__item">
                         <div class="news__item-image">
                             <a href="#!" class="news__link">
-                                <img src="images/body/block_04/new_04.png" class="news-pic">
+                                <img alt="new" src="images/body/block_04/new_02.png" class="news-pic">
+                            </a>
+                        </div>
+                        <div class="news__item__wrapper">
+                            <div class="news__item__information">
+                                <h1 class="news__item-date">18 марта, 2021</h1>
+                                <p class="news__item-title">ЗИМОВКА В REGENT
+                                    PORTO MONTENEGRO</p>
+                                <a href="#!" class="tours__link">
+                                    <p class="news__item-titleLLL">Подробнее</p>
+
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="news__item">
+                        <div class="news__item-image">
+                            <a href="#!" class="news__link">
+                                <img alt="new" src="images/body/block_04/new_03.png" class="news-pic">
+                            </a>
+                        </div>
+                        <div class="news__item__wrapper">
+                            <div class="news__item__information">
+                                <h1 class="news__item-date">18 марта, 2021</h1>
+                                <p class="news__item-title">ЗИМОВКА В REGENT
+                                    PORTO MONTENEGRO</p>
+                                <a href="#!" class="tours__link">
+                                    <p class="news__item-titleLLL">Подробнее</p>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="news__item">
+                        <div class="news__item-image">
+                            <a href="#!" class="news__link">
+                                <img alt="new" src="images/body/block_04/new_04.png" class="news-pic">
                             </a>
                         </div>
                         <div class="news__item__wrapper">
@@ -545,28 +546,28 @@
                 <ul class="region__list">
                     <li class="region__item">
                         <div class="region__item__column">
-                            <img src="images/body/block_08/horvatia.png" class="region-pic">
+                            <img alt="horvatia" src="images/body/block_08/horvatia.png" class="region-pic">
                             <h1 class="region__title">Хорватия</h1>
                             <button class="region__butt">Подробнее</button>
                         </div>
                     </li>
                     <li class="region__item">
                         <div class="region__item__column">
-                            <img src="images/body/block_08/chernogoria.png" class="region-pic">
+                            <img alt="chernogoria" src="images/body/block_08/chernogoria.png" class="region-pic">
                             <h1 class="region__title">Черногория</h1>
                             <button class="region__butt">Подробнее</button>
                         </div>
                     </li>
                     <li class="region__item">
                         <div class="region__item__column">
-                            <img src="images/body/block_08/clovenia.png" class="region-pic">
+                            <img alt="clovenia" src="images/body/block_08/clovenia.png" class="region-pic">
                             <h1 class="region__title">Словения</h1>
                             <button class="region__butt">Подробнее</button>
                         </div>
                     </li>
                     <li class="region__item">
                         <div class="region__item__column">
-                            <img src="images/body/block_08/italia.png" class="region-pic">
+                            <img alt="italia" src="images/body/block_08/italia.png" class="region-pic">
                             <h1 class="region__title">Италия</h1>
                             <button class="region__butt">Подробнее</button>
                         </div>
@@ -579,7 +580,7 @@
             <div class="wrapper">
                 <div class="region__information__col">
                     <div class="region__col-text"> Обеспечиваем отдых с повышенной надёжностью и персонализированным
-                        сервисом и <a href="#!" id="region__link">в других странах</a></div>
+                        сервисом и <a href="#!" class="region__link">в других странах</a></div>
                     <div class="region__border">ОТДЫХ С VALANTA ОСТАЁТСЯ ЯРКИМ ВОСПОМИНАНИЕМ У ВАС В ПАМЯТИ НАВСЕГДА
                     </div>
                 </div>
@@ -590,7 +591,7 @@
         <div class="wrapper">
             <div class="concierge__column">
                 <div class="concierge__text">
-                    <h4 id="concierge__title">ЭКСКЛЮЗИВНЫЙ КОНСЬЕРЖ СЕРВИС ОТ VALANTA TRAVEL COMPANY</h4>
+                    <h4 class="concierge__title">ЭКСКЛЮЗИВНЫЙ КОНСЬЕРЖ СЕРВИС ОТ VALANTA TRAVEL COMPANY</h4>
                     <div class="concierge__line"></div>
                     <div class="concierge__subtitle">
                         <p class="concierge__subtitle-text">Мы не ограничеваемся стандартным набором услуг
@@ -601,11 +602,11 @@
                     </div>
                 </div>
                 <div class="concierge__frame">
-                    <img src="images/body/block_09/image.png" class="concierge-pic">
+                    <img alt="image" src="images/body/block_09/image.png" class="concierge-pic">
                 </div>
             </div>
             <div class="concierge__title-list">
-                <h1 id="concierge__title">ПРЕДОСТАВЛЯЕМ КОНСЬЕРЖ УСЛУГИ ЛЮБОГО УРОВНЯ СЛОЖНОСТИ:</h1>
+                <h1 class="concierge__title">ПРЕДОСТАВЛЯЕМ КОНСЬЕРЖ УСЛУГИ ЛЮБОГО УРОВНЯ СЛОЖНОСТИ:</h1>
             </div>
             <!-- <div class="concierge__line"></div> -->
             <div class="concierge__column-list">
@@ -619,28 +620,28 @@
                     </li>
                     <li class="concierge__item">
                         <div class="concirge__item-text">
-                            <p id="item__number">/02</p>
+                            <p class="item__number">/02</p>
                             <p class="item_text">Подбор и бронирование авиабилетов</p>
                         </div>
                         <div class="concierge__line"></div>
                     </li>
                     <li class="concierge__item">
                         <div class="concirge__item-text">
-                            <p id="item__number">/03</p>
+                            <p class="item__number">/03</p>
                             <p class="item_text">Аренда самолётов бизнес-авиации</p>
                         </div>
                         <div class="concierge__line"></div>
                     </li>
                     <li class="concierge__item">
                         <div class="concirge__item-text">
-                            <p id="item__number">/04</p>
+                            <p class="item__number">/04</p>
                             <p class="item_text">Организация трансферов</p>
                         </div>
                         <div class="concierge__line"></div>
                     </li>
                     <li class="concierge__item">
                         <div class="concirge__item-text">
-                            <p id="item__number">/05</p>
+                            <p class="item__number">/05</p>
                             <p class="item_text">Аренда яхт</p>
                         </div>
                         <div class="concierge__line"></div>
@@ -649,21 +650,21 @@
                 <ul class="concierge__list">
                     <li class="concierge__item">
                         <div class="concirge__item-text">
-                            <p id="item__number">/06</p>
+                            <p class="item__number">/06</p>
                             <p class="item_text">Заказ столиков в ресторанах и даже рекомендации по блюдам</p>
                         </div>
                         <div class="concierge__line"></div>
                     </li>
                     <li class="concierge__item">
                         <div class="concirge__item-text">
-                            <p id="item__number">/07</p>
+                            <p class="item__number">/07</p>
                             <p class="item_text">Покупка билетов на концурты и мероприятия</p>
                         </div>
                         <div class="concierge__line"></div>
                     </li>
                     <li class="concierge__item">
                         <div class="concirge__item-text">
-                            <p id="item__number">/08</p>
+                            <p class="item__number">/08</p>
                             <p class="item_text">Индивидуальные экскурсии</p>
                         </div>
                         <div class="concierge__line"></div>
@@ -671,7 +672,7 @@
                     </li>
                     <li class="concierge__item">
                         <div class="concirge__item-text">
-                            <p id="item__number">/09</p>
+                            <p class="item__number">/09</p>
                             <p class="item_text">Организация корпоративных и личных мероприятий за границей</p>
                         </div>
                         <div class="concierge__line"></div>
@@ -707,7 +708,7 @@
                     <button class="consultation__butt" id="color_butt">Отправить</button>
 
                     <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
-                    <script type="text/javascript" src="js/script_input_field.js" async="async"></script>
+                    <script src="js/script_input_field.js" async="async"></script>
                     <!-- <script type="text/javascript" src="js/script_butt.js"></script> -->
                 </form>
             </div>
@@ -770,7 +771,7 @@
         </div>
     </div> -->
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="wrapper">
             <div class="footer__column">
                 <div class="footer__component">
@@ -791,7 +792,7 @@
                         <li class="footer__item">Блог</li>
                     </ul>
                     <ul class="footer__list">
-                        <li class="footer__item" id="color">Режим работы</li>
+                        <li class="footer__item-color">Режим работы</li>
                         <li class="footer__item">Пн-Пт 10:00-19:00</li>
                         <li class="footer__item"><span class="trfed">Время</span></li>
                     </ul>
